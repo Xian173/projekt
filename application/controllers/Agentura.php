@@ -22,8 +22,30 @@ class Agentura extends CI_Controller {
 
     function delete_agency_id() {
         $id = $this->uri->segment(3);
-        $this->delete_model->delete_student_id($id);
-        $this->index();
+        $this->agentura_m->delete_agency_id($id);
+        redirect(base_url().'index.php/agentura');
     }
 
+    public function insert()
+    {
+        $data['agentura'] = $this->agentura_m->get_agentury();
+        $data['title'] = 'Agencies';
+        $data['header'] = 'Agencies';
+        $data['header2'] = 'list of all agencies';
+
+        $this->load->view('template/header');
+        $this->load->view('agentura/view', $data);
+        $this->load->view('template/footer');
+    }
+
+    function insertAgency()
+    {
+        $data = array(
+            'Name' => $this->input->post('dname'),
+            'Address' => $this->input->post('daddress')
+        );
+        $this->agentura_m->form_insert($data);
+        redirect(base_url().'index.php/agentura');
+
+    }
 }

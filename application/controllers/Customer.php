@@ -19,4 +19,10 @@ class Customer extends CI_Controller {
         $this->load->view('customer/index', $data);
         $this->load->view('template/footer');
     }
+
+    function delete_customer_id() {
+        $id = $this->uri->segment(3);
+        $this->customer_m->delete_customer_id($id);
+        redirect(base_url().'index.php/customer');
+    }
 }

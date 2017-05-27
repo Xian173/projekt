@@ -5,12 +5,8 @@
         <h1>
             <?php echo $header ?>
             <small><?php echo $header2 ?></small>
+            <a style="float: right" class="btn btn-warning" href="<?php echo base_url()."index.php/Courses/insert"; ?>" >Insert new record</a>
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Examples</a></li>
-            <li class="active">Blank page</li>
-        </ol>
     </section>
 
     <!-- Main content -->
@@ -28,6 +24,7 @@
                         <th>Prize</th>
                         <th>Start of course</th>
                         <th>End of course</th>
+                        <th>Operations</th>
                     </tr>
                     <?php foreach ($course as $course_item): ?>
                         <tr>
@@ -36,6 +33,7 @@
                             <td><?php echo $course_item['Prize']; ?></td>
                             <td><?php echo $course_item['Start_Date']; ?></td>
                             <td><?php echo $course_item['End_Date']; ?></td>
+                            <td><a class="btn btn-primary btn-xs" href="<?php echo base_url()."index.php/Courses/delete_course_id/".$course_item['ID']; ?>" onclick="confirm('Are you sure you want to delete selected row?')">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

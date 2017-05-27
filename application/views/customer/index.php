@@ -5,12 +5,8 @@
         <h1>
             <?php echo $header ?>
             <small><?php echo $header2 ?></small>
+            <a style="float: right" class="btn btn-warning" href="<?php echo base_url()."index.php/Customer/insert"; ?>" >Insert new record</a>
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Examples</a></li>
-            <li class="active">Blank page</li>
-        </ol>
     </section>
 
     <!-- Main content -->
@@ -28,6 +24,7 @@
                         <th>Surname</th>
                         <th>Address</th>
                         <th>Phone</th>
+                        <th>Operations</th>
                     </tr>
                     <?php foreach ($customer as $customer_item): ?>
                         <tr>
@@ -36,6 +33,7 @@
                             <td><?php echo $customer_item['Surname']; ?></td>
                             <td><?php echo $customer_item['Address']; ?></td>
                             <td><?php echo $customer_item['Phone']; ?></td>
+                            <td><a class="btn btn-primary btn-xs" href="<?php echo base_url()."index.php/Customer/delete_customer_id/".$customer_item['ID']; ?>" onclick="confirm('Are you sure you want to delete selected row?')">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

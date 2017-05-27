@@ -5,12 +5,8 @@
         <h1>
             <?php echo $header ?>
             <small><?php echo $header2 ?></small>
+            <a style="float: right" class="btn btn-warning" href="<?php echo base_url()."index.php/Agentura/insert"; ?>" >Insert new record</a>
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Examples</a></li>
-            <li class="active">Blank page</li>
-        </ol>
     </section>
 
     <!-- Main content -->
@@ -33,7 +29,7 @@
                 <td><?php echo $agentura_item['ID']; ?></td>
                 <td><?php echo $agentura_item['Name']; ?></td>
                 <td><?php echo $agentura_item['Address']; ?></td>
-                <td><a class="btn btn-warning btn-xs href=<?php echo base_url()."index.php/Agentura/delete_agency_id/".$agentura_item['ID']; ?>" onclick="return confirm('Are you sure you want to delete selected row?')">Delete</a></td>
+                <td><a class="btn btn-default btn-xs" href="<?php echo base_url()."index.php/Agentura/delete_agency_id/".$agentura_item['ID']; ?>" onclick="return confirm('Are you sure you want to delete selected row?')">Delete</a></td>
             </tr>
             <?php endforeach; ?>
         </table>

@@ -19,4 +19,13 @@ class lector_m extends CI_Controller {
         $query = $this->db->get_where('lectors', array('ID' => $id));
         return $query->row_array();
     }
+
+    function delete_lector_id($id){
+        $this->db->where('ID', $id);
+        $this->db->delete('lectors');
+    }
+
+    function form_insert($data){
+        $this->db->insert('lectors', $data);
+    }
 }
