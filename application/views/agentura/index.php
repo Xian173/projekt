@@ -29,7 +29,8 @@
                 <td><?php echo $agentura_item['ID']; ?></td>
                 <td><?php echo $agentura_item['Name']; ?></td>
                 <td><?php echo $agentura_item['Address']; ?></td>
-                <td><a class="btn btn-default btn-xs" href="<?php echo base_url()."index.php/Agentura/delete_agency_id/".$agentura_item['ID']; ?>" onclick="return confirm('Are you sure you want to delete selected row?')">Delete</a></td>
+                <td><a class="btn btn-default btn-xs" href="<?php echo base_url()."index.php/Agentura/show_agency_id/".$agentura_item['ID']; ?>" >Edit</a>
+                    <a class="btn btn-primary btn-xs" href="<?php echo base_url()."index.php/Agentura/delete_agency_id/".$agentura_item['ID']; ?>" onclick="return confirm('Are you sure you want to delete selected row?')">Delete</a></td>
             </tr>
             <?php endforeach; ?>
         </table>

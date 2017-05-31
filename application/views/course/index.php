@@ -33,7 +33,8 @@
                             <td><?php echo $course_item['Prize']; ?></td>
                             <td><?php echo $course_item['Start_Date']; ?></td>
                             <td><?php echo $course_item['End_Date']; ?></td>
-                            <td><a class="btn btn-primary btn-xs" href="<?php echo base_url()."index.php/Courses/delete_course_id/".$course_item['ID']; ?>" onclick="confirm('Are you sure you want to delete selected row?')">Delete</a></td>
+                            <td><a class="btn btn-default btn-xs" href="<?php echo base_url()."index.php/Courses/show_course_id/".$course_item['ID']; ?>" >Edit</a>
+                                <a class="btn btn-primary btn-xs" href="<?php echo base_url()."index.php/Courses/delete_course_id/".$course_item['ID']; ?>" onclick="confirm('Are you sure you want to delete selected row?')">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

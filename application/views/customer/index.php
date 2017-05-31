@@ -33,7 +33,8 @@
                             <td><?php echo $customer_item['Surname']; ?></td>
                             <td><?php echo $customer_item['Address']; ?></td>
                             <td><?php echo $customer_item['Phone']; ?></td>
-                            <td><a class="btn btn-primary btn-xs" href="<?php echo base_url()."index.php/Customer/delete_customer_id/".$customer_item['ID']; ?>" onclick="confirm('Are you sure you want to delete selected row?')">Delete</a></td>
+                            <td><a class="btn btn-default btn-xs" href="<?php echo base_url()."index.php/Customer/show_customer_id/".$customer_item['ID']; ?>" >Edit</a>
+                                <a class="btn btn-primary btn-xs" href="<?php echo base_url()."index.php/Customer/delete_customer_id/".$customer_item['ID']; ?>" onclick="confirm('Are you sure you want to delete selected row?')">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

@@ -34,7 +34,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="../../index2.html" class="logo">
+        <a href="<?php echo base_url();?>" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>L</b>A</span>
             <!-- logo for regular state and mobile devices -->
@@ -53,27 +53,7 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <h4>
-                                                Support Team
-                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <!-- end message -->
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
-                        </ul>
-                    </li>
+
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         </a>
@@ -81,10 +61,6 @@
                             <!-- User image -->
                             <li class="user-header">
 
-                                <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
-                                </p>
                             </li>
                             <!-- Menu Body -->
                             <li class="user-body">
@@ -112,10 +88,6 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- Control Sidebar Toggle Button -->
-                    <li>
-                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -134,6 +106,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
+                <li><a href="<?php echo base_url(); ?>"><i class="fa fa-book"></i> <span>Home</span></a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/agentura"><i class="fa fa-book"></i> <span>Agencies</span></a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/lector"><i class="fa fa-book"></i> <span>Lectors</span></a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/courses"><i class="fa fa-book"></i> <span>Courses</span></a></li>

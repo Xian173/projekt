@@ -12,6 +12,10 @@ html {
 body {
   margin: 0;
 }
+.container {
+  width:980px;
+  float:left;
+}
 article,
 aside,
 details,
