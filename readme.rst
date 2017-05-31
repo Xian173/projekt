@@ -1,6 +1,6 @@
-################################
-Database Application Cikatricics
-################################
+###############################
+Database Application Cikatricis
+###############################
 
 This application offers basic funcionality with database about learning agencies,
 add informations, edit data that are already in databse and delete them. Home page
